@@ -86,7 +86,7 @@ sudo chmod +x /etc/update-motd.d/00-hashicorp
 sudo run-parts /etc/update-motd.d/ &>/dev/null
 
 echo "--> Ignoring LastLog"
-sudo sed -i'' 's/PrintLastLog\ yes/PrintLastLog\ no/' /etc/ssh/sshd_config
+sudo sed -i 's/PrintLastLog\ yes/PrintLastLog\ no/' /etc/ssh/sshd_config
 sudo service ssh restart &>/dev/null
 
 echo "--> Setting bash prompt"
